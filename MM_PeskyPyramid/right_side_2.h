@@ -1,5 +1,5 @@
 const byte IMAGES_RIGHT_STATE2[][8] = {
-               {
+{
   B00000000,
   B00000000,
   B00000000,
@@ -8,7 +8,7 @@ const byte IMAGES_RIGHT_STATE2[][8] = {
   B00000000,
   B00000000,
   B00000000
-      },{
+},{
   B00000000,
   B10000001,
   B11001011,

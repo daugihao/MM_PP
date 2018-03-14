@@ -9,6 +9,5 @@ const byte IMAGES_RIGHT_STATE3[][8] = {
   B00000100,
   B00000100
 }};
-
 const int IMAGES_RIGHT_STATE3_LEN = sizeof(IMAGES_RIGHT_STATE3)/8;
 

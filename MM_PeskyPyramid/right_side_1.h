@@ -1,5 +1,4 @@
 const byte IMAGES_RIGHT_STATE1[][8] = {
-
 {
   B00000000,
   B00000000,
