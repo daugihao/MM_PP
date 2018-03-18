@@ -6,6 +6,8 @@
 #include "right_side_1.h"
 #include "left_side_2.h"
 #include "right_side_2.h"
+#include "left_side_3.h"
+#include "right_side_3.h"
 
 // Define pins Right
 #define P_DIN_RIGHT 5
@@ -85,7 +87,7 @@ void loop() {
   // 0 = normal, no magents
   // 1 = Hall 0 Magnet present
   // 2 = Hall 1 Magnet present
-  // 3 = Hall 0 & 1 presnet
+  // 3 = Hall 0 & 1 present
 
   stateMachine = hallZero + hallOne;
 
@@ -137,14 +139,15 @@ void loop() {
     break;
 
     case 3:
-      lcRight.clearDisplay(0);
-      lcLeft.clearDisplay(0);
-    break;
-
-    default:
-      lcRight.clearDisplay(0);
-      lcLeft.clearDisplay(0);
-      Serial.println("Oooops");
+    if(IMAGES_LEFT_STATE3_LEN==IMAGES_RIGHT_STATE3_LEN){
+  
+        displayImageLeft(IMAGES_LEFT_STATE3[i]);
+        displayImageRight(IMAGES_RIGHT_STATE3[i]);
+   
+        if (++i >= IMAGES_LEFT_STATE3_LEN ) {
+          i = 0;
+        }    
+    }
     break;
   }
  
