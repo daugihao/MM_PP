@@ -84,7 +84,7 @@ void loop() {
   int hallOne = !digitalRead(HALL_1) << 1;
 
   // Create a small state machine 
-  // 0 = normal, no magents
+  // 0 = normal, no magnets
   // 1 = Hall 0 Magnet present
   // 2 = Hall 1 Magnet present
   // 3 = Hall 0 & 1 present
