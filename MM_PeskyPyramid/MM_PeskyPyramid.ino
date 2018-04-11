@@ -100,7 +100,7 @@ void loop() {
   Serial.println(stateMachine);
   
   switch (stateMachine){
-    case 1:
+    case 0:
       tDelay = 2000;
       if(IMAGES_LEFT_STATE0_LEN==IMAGES_RIGHT_STATE0_LEN){
         displayImageLeft(IMAGES_LEFT_STATE0[i]);
@@ -112,7 +112,7 @@ void loop() {
       }
     break;
 
-    case 0:
+    case 1:
       tDelay = 200;
       if(IMAGES_LEFT_STATE1_LEN==IMAGES_RIGHT_STATE1_LEN){
         displayImageLeft(IMAGES_LEFT_STATE1[i]);
