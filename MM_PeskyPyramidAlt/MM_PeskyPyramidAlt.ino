@@ -113,7 +113,7 @@ void loop() {
     break;
 
     case 1:
-      tDelay = 500;
+      tDelay = 200;
       if(IMAGES_LEFT_STATE1_LEN==IMAGES_RIGHT_STATE1_LEN){
         displayImageLeft(IMAGES_LEFT_STATE1[i]);
         displayImageRight(IMAGES_RIGHT_STATE1[i]);
