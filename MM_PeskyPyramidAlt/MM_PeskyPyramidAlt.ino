@@ -75,6 +75,7 @@ void setup() {
 
   
 int i = 0;
+int tDelay = 2000;
 
 
 
@@ -100,59 +101,54 @@ void loop() {
   
   switch (stateMachine){
    case 0:
-    if(IMAGES_LEFT_STATE0_LEN==IMAGES_RIGHT_STATE0_LEN){
-  
+     tDelay = 2000;
+     if(IMAGES_LEFT_STATE0_LEN==IMAGES_RIGHT_STATE0_LEN){
         displayImageLeft(IMAGES_LEFT_STATE0[i]);
         displayImageRight(IMAGES_RIGHT_STATE0[i]);
    
         if (++i >= IMAGES_LEFT_STATE0_LEN ) {
           i = 0;
         }    
-    }
+      }
     break;
 
     case 1:
-
-        if(IMAGES_LEFT_STATE1_LEN==IMAGES_RIGHT_STATE1_LEN){
-  
+      tDelay = 500;
+      if(IMAGES_LEFT_STATE1_LEN==IMAGES_RIGHT_STATE1_LEN){
         displayImageLeft(IMAGES_LEFT_STATE1[i]);
         displayImageRight(IMAGES_RIGHT_STATE1[i]);
    
         if (++i >= IMAGES_LEFT_STATE1_LEN ) {
           i = 0;
         }    
-    }
+      }
     
     break;
 
     case 2:
+      tDelay = 2000;
       if(IMAGES_LEFT_STATE2_LEN==IMAGES_RIGHT_STATE2_LEN){
-    
-          displayImageLeft(IMAGES_LEFT_STATE2[i]);
-          displayImageRight(IMAGES_RIGHT_STATE2[i]);
+        displayImageLeft(IMAGES_LEFT_STATE2[i]);
+        displayImageRight(IMAGES_RIGHT_STATE2[i]);
  
-     
-          if (++i >= IMAGES_LEFT_STATE2_LEN ) {
-            i = 0;
-          }    
+        if (++i >= IMAGES_LEFT_STATE2_LEN ) {
+          i = 0;
+        }    
       }
     break;
 
     case 3:
-    if(IMAGES_LEFT_STATE3_LEN==IMAGES_RIGHT_STATE3_LEN){
-  
+      tDelay = 2000;
+      if(IMAGES_LEFT_STATE3_LEN==IMAGES_RIGHT_STATE3_LEN){
         displayImageLeft(IMAGES_LEFT_STATE3[i]);
         displayImageRight(IMAGES_RIGHT_STATE3[i]);
    
         if (++i >= IMAGES_LEFT_STATE3_LEN ) {
           i = 0;
         }    
-    }
-    break;
+      }
+      break;
   }
  
-  
-  delay(2000);
-
+  delay(tDelay);
 }
-
